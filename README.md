@@ -110,7 +110,7 @@ npm install
 3. **Set up environment variables**
 ```bash
 # Create .env file in root directory
-TMDB_API_KEY=your_openweathermap_api_key_here
+TMDB_API_KEY=your_tmdb_api_key_here
 ```
 
 4. **Start the development server**
@@ -149,11 +149,11 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 | Home Screen | Weather Details | Loading State |
 |-------------|----------------|---------------|
-| ![Home](screenshots/ss1.png) | ![Details](screenshots/ss2.png) |
+| ![Loading](screenshots/ss3.png) | ![Pick User](screenshots/ss1.png) | ![Skeleton Loading](screenshots/ss4.png) | ![Home](screenshots/ss2.png) | ![Home scrolled](screenshots/ss6.png) | ![Movie details](screenshots/ss5.png) |
 
 ## 🙏 **Acknowledgments**
 
-- **TMBD** - Weather data API
+- **TMBD** - Movie data API
 - **Expo Team** - Development platform
 - **React Native Community** - Open-source libraries
 - **Dribbble & Behance Designers** - UI inspiration
