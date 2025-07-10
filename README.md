@@ -126,7 +126,7 @@ npx expo start
 
 ## 🔧 **API Configuration**
 
-### **Getting OpenWeatherMap API Key**
+### **Getting TMDB API Key**
 1. Visit [TMDB](https://www.themoviedb.org/settings/api)
 2. Create free account
 3. Navigate to API Keys section
