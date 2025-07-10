@@ -10,6 +10,12 @@ export default function RootLayout() {
   const colorScheme = useColorScheme();
   const [loaded] = useFonts({
     SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
+    SFProDisplay: require('../assets/fonts/SF-Pro-Display-Regular.otf'),
+    SFProDisplayBold: require('../assets/fonts/SF-Pro-Display-Bold.otf'),
+    SFProDisplayMedium: require('../assets/fonts/SF-Pro-Display-Medium.otf'),
+    SFPro: require('../assets/fonts/SF-Pro.ttf'),
+    SFProText: require('../assets/fonts/SF-Pro-Text-Regular.otf'),
+    SFProTextBold: require('../assets/fonts/SF-Pro-Text-Bold.otf'),
   });
 
   if (!loaded) {
@@ -19,8 +25,8 @@ export default function RootLayout() {
 
   return (
     <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+      <Stack screenOptions={{ headerShown: false, navigationBarHidden: true}}>
+        <Stack.Screen name="index" options={{ headerShown: false, animation: 'fade_from_bottom' }} />
         <Stack.Screen name="+not-found" />
       </Stack>
       <StatusBar style="auto" />

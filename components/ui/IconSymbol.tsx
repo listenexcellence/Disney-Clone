@@ -1,41 +1,34 @@
-// Fallback for using MaterialIcons on Android and web.
+import React from 'react';
+import { MaterialIcons, Ionicons, Feather, FontAwesome, FontAwesome5, AntDesign, MaterialCommunityIcons } from '@expo/vector-icons';
 
-import MaterialIcons from '@expo/vector-icons/MaterialIcons';
-import { SymbolWeight, SymbolViewProps } from 'expo-symbols';
-import { ComponentProps } from 'react';
-import { OpaqueColorValue, type StyleProp, type TextStyle } from 'react-native';
+const iconSets = {
+  material: MaterialIcons,
+  ion: Ionicons,
+  feather: Feather,
+  fa: FontAwesome,
+  fa5: FontAwesome5,
+  ant: AntDesign,
+  mci: MaterialCommunityIcons,
+};
 
-type IconMapping = Record<SymbolViewProps['name'], ComponentProps<typeof MaterialIcons>['name']>;
-type IconSymbolName = keyof typeof MAPPING;
+type IconSymbolProps = {
+  name: string;
+  filledName?: string;
+  size?: number;
+  color?: string;
+  type?: keyof typeof iconSets;
+  focused?: boolean; // <-- active state
+};
 
-/**
- * Add your SF Symbols to Material Icons mappings here.
- * - see Material Icons in the [Icons Directory](https://icons.expo.fyi).
- * - see SF Symbols in the [SF Symbols](https://developer.apple.com/sf-symbols/) app.
- */
-const MAPPING = {
-  'house.fill': 'home',
-  'paperplane.fill': 'send',
-  'chevron.left.forwardslash.chevron.right': 'code',
-  'chevron.right': 'chevron-right',
-} as IconMapping;
-
-/**
- * An icon component that uses native SF Symbols on iOS, and Material Icons on Android and web.
- * This ensures a consistent look across platforms, and optimal resource usage.
- * Icon `name`s are based on SF Symbols and require manual mapping to Material Icons.
- */
 export function IconSymbol({
   name,
+  filledName,
   size = 24,
-  color,
-  style,
-}: {
-  name: IconSymbolName;
-  size?: number;
-  color: string | OpaqueColorValue;
-  style?: StyleProp<TextStyle>;
-  weight?: SymbolWeight;
-}) {
-  return <MaterialIcons color={color} size={size} name={MAPPING[name]} style={style} />;
+  color = 'black',
+  type = 'material',
+  focused = false,
+}: IconSymbolProps) {
+  const IconComponent = iconSets[type] || MaterialIcons;
+  const iconName = focused && filledName ? filledName : name;
+  return <IconComponent name={iconName as any} size={size} color={color} />;
 }
