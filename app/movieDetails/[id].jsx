@@ -91,7 +91,7 @@ const MovieDetailScreen = () => {
           <Text style={styles.similarTitle}>Similar Movies</Text>
           <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={{ gap: 12, paddingVertical: 10 }}>
             {similarMovies.map((sim) => (
-              <TouchableOpacity key={sim.id} onPress={() => router.push(`/movie/${sim.id}`)}>
+              <TouchableOpacity key={sim.id} onPress={() => router.push(`/movieDetails/${sim.id}`)}>
                 <Image
                   source={{ uri: `https://image.tmdb.org/t/p/w300${sim.poster_path}` }}
                   style={styles.similarPoster}

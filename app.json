@@ -4,7 +4,11 @@
     "slug": "Disney-Clone",
     "version": "1.0.0",
     "extra": {
-      "tmdbApiKey": "b59ba04932b5756b9cf7e718c3064cc9"
+      "tmdbApiKey": "b59ba04932b5756b9cf7e718c3064cc9",
+      "router": {},
+      "eas": {
+        "projectId": "b283f69a-dde1-4ca9-8535-7e9fdd05793e"
+      }
     },
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -12,14 +16,19 @@
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.starexcell.DisneyClone",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "package": "com.starexcell.DisneyClone"
     },
     "web": {
       "bundler": "metro",
