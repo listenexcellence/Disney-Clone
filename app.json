@@ -3,6 +3,9 @@
     "name": "Disney-Clone",
     "slug": "Disney-Clone",
     "version": "1.0.0",
+    "extra": {
+      "tmdbApiKey": "b59ba04932b5756b9cf7e718c3064cc9"
+    },
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
     "scheme": "disneyclone",
