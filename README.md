@@ -1,4 +1,4 @@
-# 🎬 Movie Explorer App — Built with React Native + Expo
+# 🎬 Disney Clone Movie Explorer App — Built with React Native + Expo
 
 A high-performance, modern mobile application for discovering movies and TV shows. Powered by the TMDb API, **Movie Explorer** helps users browse popular, trending, and genre-based content — including trailers, ratings, similar recommendations, and more.
 
@@ -8,7 +8,7 @@ Built for mobile with smooth animations, local caching, offline fallback, and re
 
 ## 📱 Live Preview
 
-> 🔗 **[Try it on Expo](https://expo.dev/preview/update?message=weather+app+first+release&updateRuntimeVersion=1.0.0&createdAt=2025-07-08T18%3A43%3A15.338Z&slug=exp&projectId=65a6a591-1aec-4aec-8f3d-a924e42aa3d2&group=5c2bbcef-2772-4128-b0ca-b41661a959e0)** - Scan QR code with Expo Go app
+> 🔗 **[Try it on Expo](https://expo.dev/preview/update?message=first+release&updateRuntimeVersion=1.0.0&createdAt=2025-07-10T22%3A08%3A03.641Z&slug=exp&projectId=b283f69a-dde1-4ca9-8535-7e9fdd05793e&group=acb94e68-a19b-4ad5-a78e-7ca2c4be8650)** - Scan QR code with Expo Go app
 
 ---
 
