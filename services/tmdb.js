@@ -15,13 +15,36 @@ const fetchMovies = async (url) => {
   }
 };
 
-export const getPopularMovies = () => fetchMovies('/movie/popular?language=en-US&page=1');
-export const getTopRatedMovies = () => fetchMovies('/movie/top_rated?language=en-US&page=1');
-export const getMoviesByGenre = (genreId) => fetchMovies(`/discover/movie?with_genres=${genreId}&language=en-US&page=1`);
-export const getAnimeMovies = () =>
-  fetchMovies(`/discover/movie?with_genres=16&with_original_language=ja&language=en-US&page=1`);
-export const getBlockbusterMovies = () =>
-  fetchMovies(`/discover/movie?sort_by=popularity.desc&vote_count.gte=1000&language=en-US&page=1`);
+const getRandomPage = () => Math.floor(Math.random() * 10) + 1;
+export const getPopularMovies = () => {
+  const page = getRandomPage();
+  return fetchMovies(`/movie/popular?language=en-US&page=${page}`);
+};
+
+export const getTopRatedMovies = () => {
+  const page = getRandomPage();
+  return fetchMovies(`/movie/top_rated?language=en-US&page=${page}`);
+};
+
+export const getMoviesByGenre = (genreId) => {
+  const page = getRandomPage();
+  return fetchMovies(`/discover/movie?with_genres=${genreId}&language=en-US&page=${page}`);
+};
+
+export const getAnimeMovies = () => {
+  const page = getRandomPage();
+  return fetchMovies(`/search/movie?query=anime&language=en-US&page=${page}`);
+};
+
+export const getHorrorMovies = () => getMoviesByGenre(27);   // Already uses random page
+export const getActionMovies = () => getMoviesByGenre(28);
+export const getComedyMovies = () => getMoviesByGenre(35);
+
+export const getBlockbusterMovies = () => {
+  const page = getRandomPage();
+  return fetchMovies(`/discover/movie?sort_by=popularity.desc&vote_count.gte=1000&language=en-US&page=${page}`);
+};
+
 export const getMovieDetails = async (id) => {
   const res = await axios.get(`${BASE_URL}/movie/${id}?api_key=${API_KEY}&language=en-US`);
   return res.data;
