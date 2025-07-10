@@ -9,16 +9,16 @@ const UserScreen = () => {
       <View>
         <Text style={styles.watchText}>Who&apos;s watching?</Text>
         <View style={styles.userContainer}>
-          <TouchableOpacity style={{alignItems: 'center', gap: 10}} onPress={() => router.push('/home')}>
+          <TouchableOpacity style={{alignItems: 'center', gap: 10}} onPress={() => router.replace('/home')}>
             <Image source={require('../../assets/images/user1.png')} style={styles.userImage} />
             <Text style={styles.text}>Temitope</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={{alignItems: 'center', gap: 10}} onPress={() => router.push('/home')}>
+          <TouchableOpacity style={{alignItems: 'center', gap: 10}} onPress={() => router.replace('/home')}>
             <Image source={require('../../assets/images/user2.png')} style={styles.userImage} />
             <Text style={styles.text}>John</Text>
           </TouchableOpacity>
         </View>
-          <TouchableOpacity style={{alignItems: 'center', gap: 10, marginTop: 30, width: 'fit-content'}} onPress={() => router.push('/home')}>
+          <TouchableOpacity style={{alignItems: 'center', gap: 10, marginTop: 30, width: 'fit-content'}} onPress={() => router.replace('/home')}>
             <View style={{borderWidth: 1, borderColor: '#ffffff60', padding: 10, borderRadius: 10}}>
             <IconSymbol type="ion" size={50} name="add" color="#fff" /></View>
           </TouchableOpacity>

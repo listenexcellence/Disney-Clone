@@ -164,7 +164,7 @@ const HomeScreen = () => {
                                     <IconSymbol type="ant" name="search1" size={22} color="#fff" />
                                 </BlurView>
                             </TouchableOpacity>
-                            <TouchableOpacity>
+                            <TouchableOpacity onPress={() => router.replace('/userSelect')}>
                                 <Image source={ require('../../assets/images/user1.png')} style={styles.profile} />
                             </TouchableOpacity>
                         </View>
